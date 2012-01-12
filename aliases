@@ -1,0 +1,44 @@
+## Alias configuration
+#
+# expand aliases before completing
+#
+
+setopt complete_aliases     # 自動補完時にaliasを展開する
+
+alias where="command -v"
+alias j="jobs -l"
+alias g="git"
+alias r="rails"
+alias e="emacsclient"
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+alias pd=popd
+alias psg='ps aux | grep'
+alias -g G='| grep'
+alias dm="rake db:migrate"
+alias dmt="rake db:migrate RAILS_ENV=test"
+alias dmr="rake db:migrate:reset"
+alias dmrt="rake db:migrate:reset RAILS_ENV=test"
+alias ds="rake db:seed"
+
+
+case "${OSTYPE}" in
+freebsd*|darwin*)
+    alias ls="ls -G -w"
+    ;;
+linux*)
+    alias ls="ls --color"
+    ;;
+esac
+
+alias la="ls -a"
+alias lf="ls -F"
+alias ll="ls -la"
+alias du="du -h"
+alias df="df -h"
+alias su="su -l"
+
+# tscreen
+if [ -x /usr/bin/tscreen -o -x /opt/local/bin/tscreen ]; then
+   alias screen='tscreen'
+fi
