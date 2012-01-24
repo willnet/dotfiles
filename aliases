@@ -9,7 +9,14 @@ alias where="command -v"
 alias j="jobs -l"
 alias g="git"
 alias r="rails"
+alias rg="rails g"
+alias rgc="rails g controller"
+alias rgm="rails g model"
+alias rgi="rails g integration_test"
+alias rc="rails c"
 alias e="emacsclient"
+alias b="bundle"
+alias be="bundle exec"
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 alias pd=popd
