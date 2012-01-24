@@ -13,3 +13,10 @@ else
   echo "ln -s $PWD/`dirname $0`/aliases $HOME/.aliases"
   ln -s "$PWD/`dirname $0`/aliases" "$HOME/.aliases"
 fi
+
+if [ -e "$HOME/.pryrc" ]; then
+  echo "already exists .pryrc"
+else
+  echo "ln -s $PWD/`dirname $0`/pryrc $HOME/.pryrc"
+  ln -s "$PWD/`dirname $0`/pryrc" "$HOME/.pryrc"
+fi
