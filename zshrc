@@ -1,5 +1,6 @@
 export LANG=ja_JP.UTF-8
 export EDITOR=emacsclient
+export GREP_OPTIONS="--color=auto"
 
 ## Default shell configuration
 #
