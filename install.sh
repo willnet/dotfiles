@@ -20,3 +20,10 @@ else
   echo "ln -s $PWD/`dirname $0`/pryrc $HOME/.pryrc"
   ln -s "$PWD/`dirname $0`/pryrc" "$HOME/.pryrc"
 fi
+
+if [ -e "$HOME/.gitconfig" ]; then
+  echo "already exists .gitconfig"
+else
+  echo "ln -s $PWD/`dirname $0`/gitconfig $HOME/.gitconfig"
+  ln -s "$PWD/`dirname $0`/gitconfig" "$HOME/.gitconfig"
+fi

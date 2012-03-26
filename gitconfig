@@ -1,0 +1,18 @@
+[color]
+        ui = auto
+[alias]
+        s = status
+        st = status
+        co = checkout
+        ci = commit
+        a = add
+        b = branch
+        br = branch
+        di = diff
+        dic = diff --cached
+        r = reset
+        m = merge
+        l = log
+[user]
+	name = willnet
+        email = netwillnet@gmail.com
