@@ -1,29 +1,16 @@
 #!/bin/sh
 
-if [ -e "$HOME/.zshrc" ]; then
-  echo "already exists .zshrc"
+makelink()
+{
+if [ -e "$HOME/$0" ]; then
+  echo "already exists $0"
 else
-  echo "ln -s $PWD/`dirname $0`/zshrc $HOME/.zshrc"
-  ln -s "$PWD/`dirname $0`/zshrc" "$HOME/.zshrc"
-fi
+  echo "ln -s $PWD/`dirname $0`/$1 $HOME/.$1"
+  ln -s "$PWD/`dirname $0`/$1" "$HOME/.$1"
+fi  
+}
 
-if [ -e "$HOME/.aliases" ]; then
-  echo "already exists .aliases"
-else
-  echo "ln -s $PWD/`dirname $0`/aliases $HOME/.aliases"
-  ln -s "$PWD/`dirname $0`/aliases" "$HOME/.aliases"
-fi
-
-if [ -e "$HOME/.pryrc" ]; then
-  echo "already exists .pryrc"
-else
-  echo "ln -s $PWD/`dirname $0`/pryrc $HOME/.pryrc"
-  ln -s "$PWD/`dirname $0`/pryrc" "$HOME/.pryrc"
-fi
-
-if [ -e "$HOME/.gitconfig" ]; then
-  echo "already exists .gitconfig"
-else
-  echo "ln -s $PWD/`dirname $0`/gitconfig $HOME/.gitconfig"
-  ln -s "$PWD/`dirname $0`/gitconfig" "$HOME/.gitconfig"
-fi
+makelink zshrc
+makelink aliases
+makelink pryrc
+makelink gitconfig
