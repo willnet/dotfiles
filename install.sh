@@ -2,8 +2,8 @@
 
 makelink()
 {
-if [ -e "$HOME/$0" ]; then
-  echo "already exists $0"
+if [ -e "$HOME/.$1" ]; then
+  echo "already exists ~/.$1"
 else
   echo "ln -s $PWD/`dirname $0`/$1 $HOME/.$1"
   ln -s "$PWD/`dirname $0`/$1" "$HOME/.$1"
