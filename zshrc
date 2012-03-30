@@ -152,9 +152,9 @@ RPROMPT='[`rprompt-git-current-branch`]'
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
 
-if [ -f ~/.zsh/z/z.sh ]; then
+if [ -f ~/.zsh/z.sh ]; then
   _Z_CMD=j
-  source ~/.zsh/z/z.sh
+  source ~/.zsh/z.sh
   precmd() {
     _z --add "$(pwd -P)"
   }

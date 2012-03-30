@@ -14,3 +14,21 @@ makelink zshrc
 makelink aliases
 makelink pryrc
 makelink gitconfig
+
+# submodule 
+cd "$PWD/`dirname $0`"
+git submodule update --init
+
+if [ -e "$HOME/.zsh" ]; then
+  echo "already exists .zsh"
+else
+  mkdir ~/.zsh
+fi
+
+if [ -e "$HOME/.zsh/z.sh" ]; then
+  echo "already exists ~/.zsh/z.sh"
+else
+  echo "ln -s $PWD/z/z.sh ~/.zsh/z.sh"
+  ln -s $PWD/z/z.sh ~/.zsh/z.sh
+fi  
+
