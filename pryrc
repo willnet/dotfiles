@@ -22,5 +22,3 @@ if defined? Hirb
 
   Hirb.enable
 end
-
-Pry.hooks = {before_session: ->(*args) { self.extend Rails::ConsoleMethods if defined?(Rails::ConsoleMethods) } }
