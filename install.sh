@@ -14,6 +14,7 @@ makelink zshrc
 makelink aliases
 makelink pryrc
 makelink gitconfig
+makelink screenrc
 
 # submodule 
 cd "$PWD/`dirname $0`"

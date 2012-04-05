@@ -2,7 +2,7 @@ escape ^T^t
 hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w"
 defscrollback 10000
 startup_message off
-bind -c REGION o focus down
+bind o focus down
 bind -c REGION p focus up
 bind -c REGION 0 remove
 bind -c REGION 1 only
