@@ -14,7 +14,7 @@ makelink zshrc
 makelink aliases
 makelink pryrc
 makelink gitconfig
-makelink screenrc
+makelink tmux.conf
 
 # submodule 
 cd "$PWD/`dirname $0`"
