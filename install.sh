@@ -5,8 +5,9 @@ makelink()
 if [ -e "$HOME/.$1" ]; then
   echo "already exists ~/.$1"
 else
-  echo "ln -s $PWD/`dirname $0`/$1 $HOME/.$1"
-  ln -s "$PWD/`dirname $0`/$1" "$HOME/.$1"
+  cd `dirname $0`
+  echo "ln -s `pwd`/$1 $HOME/.$1"
+  ln -s "`pwd`/$1" "$HOME/.$1"
 fi  
 }
 
@@ -17,7 +18,8 @@ makelink gitconfig
 makelink tmux.conf
 
 # submodule 
-cd "$PWD/`dirname $0`"
+cd `dirname $0`
+echo "git submodule update --init"
 git submodule update --init
 
 if [ -e "$HOME/.zsh" ]; then
