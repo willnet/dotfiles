@@ -107,8 +107,8 @@ fi
 
 autoload zargs
 
-if [ -f ~/work/github/zaw/zaw.zsh ]; then
-    source ~/work/github/zaw/zaw.zsh
+if [ -f ~/github/zaw/zaw.zsh ]; then
+    source ~/github/zaw/zaw.zsh
     bindkey '^R' zaw-history
 fi
 
