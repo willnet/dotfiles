@@ -44,8 +44,3 @@ alias ll="ls -la"
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
-
-# tscreen
-if [ -x /usr/bin/tscreen -o -x /opt/local/bin/tscreen ]; then
-   alias screen='tscreen'
-fi
