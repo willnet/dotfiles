@@ -70,9 +70,6 @@ setopt list_packed # 補完候補を詰めて表示する
 setopt noautoremoveslash # パスの最後の/を自動的に削除しない
 setopt nolistbeep # 補完候補表示時などのビープ音をオフ
 
-## カレントディレクトリ中に指定されたディレクトリが見つからなかった場合に
-## 移動先を検索するリスト
-cdpath=(~/work)
 ## ディレクトリが変わったらディレクトリスタックを表示。
 chpwd_functions=($chpwd_functions dirs)
 
