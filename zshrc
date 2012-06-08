@@ -76,6 +76,10 @@ chpwd_functions=($chpwd_functions dirs)
 # emacs like keybind
 bindkey -e
 
+# ヒストリ呼び出しのカスタマイズ(http://gihyo.jp/dev/serial/01/zsh-book/0003)
+bindkey '^p' history-beginning-search-backward # history-beginning-search-backward-endとは違い、カーソルは行末に移動しない
+bindkey '^n' history-beginning-search-forward
+
 ## Command history configuration
 #
 HISTFILE=~/.zsh_history
