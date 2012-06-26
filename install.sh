@@ -1,27 +1,29 @@
 #!/bin/sh
 
+cd `dirname $0`
+
+DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf )
+
 makelink()
 {
 if [ -e "$HOME/.$1" ]; then
   echo "already exists ~/.$1"
 else
-  cd `dirname $0`
   echo "ln -s `pwd`/$1 $HOME/.$1"
   ln -s "`pwd`/$1" "$HOME/.$1"
 fi  
 }
 
-makelink zshrc
-makelink aliases
-makelink pryrc
-makelink gitconfig
-makelink tmux.conf
+for((i = 0; i < ${#DOTFILES[*]}; i++))
+{
+  makelink "${DOTFILES[i]}"
+}
 
 # submodule 
-cd `dirname $0`
 echo "git submodule update --init"
 git submodule update --init
 
+# z.sh
 if [ -e "$HOME/.zsh" ]; then
   echo "already exists .zsh"
 else
