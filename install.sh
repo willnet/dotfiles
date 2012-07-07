@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf )
+DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf gemrc)
 
 makelink()
 {
