@@ -6,7 +6,6 @@
 setopt complete_aliases     # 自動補完時にaliasを展開する
 
 alias where="command -v"
-alias j="jobs -l"
 alias g="git"
 alias r="rails"
 alias rg="rails g"
