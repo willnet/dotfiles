@@ -37,3 +37,10 @@ else
   ln -s $PWD/z/z.sh ~/.zsh/z.sh
 fi  
 
+# zaw
+if [ -e "$HOME/.zsh/zaw" ]; then
+  echo "already exists ~/.zsh/zaw"
+else
+  echo "ln -s $PWD/zaw ~/.zsh/zaw"
+  ln -s $PWD/zaw ~/.zsh/zaw
+fi  

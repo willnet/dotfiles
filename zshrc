@@ -104,9 +104,9 @@ fi
 
 autoload zargs
 
-if [ -f ~/github/zaw/zaw.zsh ]; then
-    source ~/github/zaw/zaw.zsh
-    bindkey '^R' zaw-history
+if [ -f ~/.zsh/zaw/zaw.zsh ]; then
+  source ~/.zsh/zaw/zaw.zsh
+  bindkey '^R' zaw-history
 fi
 
 ## prompt for git(http://d.hatena.ne.jp/uasi/20091025/1256458798)
