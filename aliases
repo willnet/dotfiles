@@ -43,3 +43,8 @@ alias ll="ls -la"
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
+
+if [ -x `which rlwrap` ]; then  
+  alias c="rlwrap coffee"
+  alias coffee="rlwrap coffee"
+fi
