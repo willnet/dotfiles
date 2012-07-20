@@ -1,0 +1,2 @@
+(define-key global-map "\C-h" 'delete-backward-char)
+(define-key isearch-mode-map "\C-h" 'isearch-delete-char)
