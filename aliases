@@ -44,7 +44,7 @@ alias du="du -h"
 alias df="df -h"
 alias su="su -l"
 
-if [ -x `which rlwrap` ]; then  
+if [ -x `which rlwrap 2> /dev/null` ]; then  
   alias c="rlwrap coffee"
   alias coffee="rlwrap coffee"
 fi
