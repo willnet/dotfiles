@@ -16,3 +16,15 @@
 [user]
 	name = willnet
         email = netwillnet@gmail.com
+[credential]
+	helper = osxkeychain
+[include]
+	path = .gitconfig.local
+[url "git://github.com/"]
+  # Read-only
+  insteadOf = gh:
+[url "git@github.com:"]
+  # Read-only
+  insteadOf = wgh:
+[url "git@heroku.com:"]
+  insteadOf = heroku:
