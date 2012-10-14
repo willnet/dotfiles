@@ -22,11 +22,11 @@ alias pd=popd
 alias psg='ps aux | grep'
 alias -g G='| grep'
 alias dm="rake db:migrate"
-alias dmt="rake db:migrate RAILS_ENV=test"
 alias dmr="rake db:migrate:reset"
-alias dmrt="rake db:migrate:reset RAILS_ENV=test"
 alias ds="rake db:seed"
-
+alias -g RET="RAILS_ENV=test"
+alias -g RED="RAILS_ENV=development"
+alias -g REP="RAILS_ENV=production"
 
 case "${OSTYPE}" in
 freebsd*|darwin*)
@@ -43,7 +43,7 @@ alias ll="ls -la"
 alias du="du -h"
 alias df="df -h"
 alias su="su -l"
-
+alias j="_z"
 if [ -x `which rlwrap 2> /dev/null` ]; then  
   alias c="rlwrap coffee"
   alias coffee="rlwrap coffee"

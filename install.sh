@@ -23,7 +23,9 @@ for((i = 0; i < ${#DOTFILES[*]}; i++))
 echo "git submodule update --init"
 git submodule update --init
 
-# z.sh
+#
+# zsh
+#
 if [ -e "$HOME/.zsh" ]; then
   echo "already exists .zsh"
 else
