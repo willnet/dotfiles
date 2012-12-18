@@ -2,47 +2,37 @@
 
 cd `dirname $0`
 
-DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf gemrc)
+DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf gemrc )
 
 makelink()
 {
-if [ -e "$HOME/.$1" ]; then
-  echo "already exists ~/.$1"
+if [ -e $1 ]; then
+  echo "already exists $1"
 else
-  echo "ln -s `pwd`/$1 $HOME/.$1"
-  ln -s "`pwd`/$1" "$HOME/.$1"
+  echo "ln -s $1 $2"
+  ln -s $1 $2
 fi  
 }
 
-for((i = 0; i < ${#DOTFILES[*]}; i++))
+check_exists()
 {
-  makelink "${DOTFILES[i]}"
+if [ -e $1 ]; then
+  echo "already exists $1"
+  return 1
+else
+  return 0
+fi
 }
+
+for DOTFILE_PATH in $DOTFILES; do
+  makelink "`pwd`/$DOTFILE_PATH" "~/.$DOTFILE_PATH"
+done
 
 # submodule 
 echo "git submodule update --init"
 git submodule update --init
 
-#
-# zsh
-#
-if [ -e "$HOME/.zsh" ]; then
-  echo "already exists .zsh"
-else
-  mkdir ~/.zsh
-fi
+check_exists ~/.zsh && mkdir ~/.zsh
+check_exists ~/.zsh/z.sh && make_link "`pwd`/z/z.sh ~/.zsh/z.sh"
+check_exists ~/.zsh/zaw && make_link "`pwd`/zaw ~/.zsh/zaw"
 
-if [ -e "$HOME/.zsh/z.sh" ]; then
-  echo "already exists ~/.zsh/z.sh"
-else
-  echo "ln -s $PWD/z/z.sh ~/.zsh/z.sh"
-  ln -s $PWD/z/z.sh ~/.zsh/z.sh
-fi  
-
-# zaw
-if [ -e "$HOME/.zsh/zaw" ]; then
-  echo "already exists ~/.zsh/zaw"
-else
-  echo "ln -s $PWD/zaw ~/.zsh/zaw"
-  ln -s $PWD/zaw ~/.zsh/zaw
-fi  
