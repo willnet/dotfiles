@@ -4,16 +4,6 @@ cd `dirname $0`
 
 DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf gemrc )
 
-makelink()
-{
-if [ -e $1 ]; then
-  echo "already exists $1"
-else
-  echo "ln -s $1 $2"
-  ln -s $1 $2
-fi  
-}
-
 check_exists()
 {
 if [ -e $1 ]; then
@@ -22,6 +12,11 @@ if [ -e $1 ]; then
 else
   return 0
 fi
+}
+
+makelink()
+{
+check_exists $2 && echo "ln -s $1 $2" && ln -s $1 $2
 }
 
 for DOTFILE_PATH in $DOTFILES; do
