@@ -20,7 +20,7 @@ check_exists $2 && echo "ln -s $1 $2" && ln -s $1 $2
 }
 
 for DOTFILE_PATH in $DOTFILES; do
-  makelink "`pwd`/$DOTFILE_PATH" "~/.$DOTFILE_PATH"
+  makelink "`pwd`/$DOTFILE_PATH" "$HOME/.$DOTFILE_PATH"
 done
 
 # submodule 
@@ -28,6 +28,6 @@ echo "git submodule update --init"
 git submodule update --init
 
 check_exists ~/.zsh && mkdir ~/.zsh
-check_exists ~/.zsh/z.sh && make_link "`pwd`/z/z.sh ~/.zsh/z.sh"
-check_exists ~/.zsh/zaw && make_link "`pwd`/zaw ~/.zsh/zaw"
+check_exists ~/.zsh/z.sh && make_link "`pwd`/z/z.sh" "$HOME/.zsh/z.sh"
+check_exists ~/.zsh/zaw && make_link "`pwd`/zaw" "$HOME/.zsh/zaw"
 
