@@ -28,6 +28,6 @@ echo "git submodule update --init"
 git submodule update --init
 
 check_exists ~/.zsh && mkdir ~/.zsh
-check_exists ~/.zsh/z.sh && make_link "`pwd`/z/z.sh" "$HOME/.zsh/z.sh"
-check_exists ~/.zsh/zaw && make_link "`pwd`/zaw" "$HOME/.zsh/zaw"
+check_exists ~/.zsh/z.sh && makelink "`pwd`/z/z.sh" "$HOME/.zsh/z.sh"
+check_exists ~/.zsh/zaw && makelink "`pwd`/zaw" "$HOME/.zsh/zaw"
 
