@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-DOTFILES=( zshrc aliases pryrc gitconfig railsrc tmux.conf gemrc )
+DOTFILES=( zshrc pryrc gitconfig railsrc tmux.conf gemrc )
 
 check_exists()
 {
