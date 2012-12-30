@@ -26,6 +26,7 @@ alias dmr="rake db:migrate:reset"
 alias ds="rake db:seed"
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
+alias -g RES="RAILS_ENV=staging"
 alias -g REP="RAILS_ENV=production"
 
 case "${OSTYPE}" in
