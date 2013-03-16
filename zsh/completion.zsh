@@ -1,5 +1,5 @@
 ## Completion configuration
 #
-fpath=(~/.functions ${fpath})
+fpath=(~/.zsh/zsh-completions/src $fpath)
 autoload -U compinit
 compinit
