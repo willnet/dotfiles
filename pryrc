@@ -49,6 +49,6 @@ if defined? PryNav
   Pry.commands.alias_command 'n', 'next'
 end
 
-if defined? PryRails
-  Pry.hooks.add_hook(:before_eval, :reload_everything) { reload!(true) }
-end
+#if defined? PryRails
+#  Pry.hooks.add_hook(:before_eval, :reload_everything) { reload!(true) }
+#end
