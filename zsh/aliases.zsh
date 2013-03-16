@@ -24,6 +24,7 @@ alias -g G='| grep'
 alias dm="rake db:migrate"
 alias dmr="rake db:migrate:reset"
 alias ds="rake db:seed"
+alias dtp="rake db:test:prepare"
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
 alias -g RES="RAILS_ENV=staging"
