@@ -51,3 +51,7 @@ if [ -x `which rlwrap 2> /dev/null` ]; then
   alias c="rlwrap coffee"
   alias coffee="rlwrap coffee"
 fi
+
+if [ -x `which hub 2> /dev/null` ]; then  
+  eval "$(hub alias -s)"
+fi
