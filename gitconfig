@@ -13,6 +13,8 @@
         r = reset
         m = merge
         l = log
+        push-for-review = "!sh -c 'git push origin HEAD:refs/for/master/'"
+        fetch-pulls = fetch origin +refs/pull/*/head:refs/remotes/origin/pr/*
 [user]
 	name = willnet
         email = netwillnet@gmail.com
