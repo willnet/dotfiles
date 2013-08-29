@@ -28,3 +28,5 @@
   insteadOf = wgh:
 [url "git@heroku.com:"]
   insteadOf = heroku:
+[push]
+	default = simple
