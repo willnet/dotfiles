@@ -8,6 +8,7 @@ setopt complete_aliases     # 自動補完時にaliasを展開する
 alias where="command -v"
 alias g="git"
 alias r="rails"
+alias b="bundle"
 alias rg="rails g"
 alias rgc="rails g controller"
 alias rgm="rails g model"
