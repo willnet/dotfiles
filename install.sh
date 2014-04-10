@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-DOTFILES=( zshrc pryrc gitconfig railsrc tmux.conf gemrc )
+DOTFILES=("zshrc" "pryrc" "gitconfig" "railsrc" "tmux.conf" "gemrc")
 
 check_exists()
 {
@@ -19,7 +19,7 @@ makelink()
 check_exists $2 && echo "ln -s $1 $2" && ln -s $1 $2
 }
 
-for DOTFILE_PATH in $DOTFILES; do
+for DOTFILE_PATH in ${DOTFILES[@]}; do
   makelink "`pwd`/$DOTFILE_PATH" "$HOME/.$DOTFILE_PATH"
 done
 
