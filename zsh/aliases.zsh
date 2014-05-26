@@ -17,6 +17,7 @@ alias rc="rails c"
 alias e="emacsclient"
 alias b="bundle"
 alias be="bundle exec"
+alias bu="bundle update"
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 alias pd=popd
