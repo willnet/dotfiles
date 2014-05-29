@@ -18,6 +18,9 @@ alias e="emacsclient"
 alias b="bundle"
 alias be="bundle exec"
 alias bu="bundle update"
+alias v="vagrant"
+alias vu="vagrant up"
+alias vs="vagrant status"
 autoload -Uz zmv
 alias zmv='noglob zmv -W'
 alias pd=popd
