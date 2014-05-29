@@ -28,8 +28,8 @@ alias psg='ps aux | grep'
 alias -g G='| grep'
 alias dm="rake db:migrate"
 alias dmr="rake db:migrate:reset"
+alias dr="rake db:reset"
 alias ds="rake db:seed"
-alias dtp="rake db:test:prepare"
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
 alias -g RES="RAILS_ENV=staging"
@@ -56,11 +56,11 @@ alias du="du -h"
 alias df="df -h"
 alias su="su -l"
 alias j="_z"
-if [ -x `which rlwrap 2> /dev/null` ]; then  
+if [ -x `which rlwrap 2> /dev/null` ]; then
   alias c="rlwrap coffee"
   alias coffee="rlwrap coffee"
 fi
 
-if [ -x `which hub 2> /dev/null` ]; then  
+if [ -x `which hub 2> /dev/null` ]; then
   eval "$(hub alias -s)"
 fi
