@@ -20,7 +20,7 @@ if defined? Hirb
     end
   end
 
-  Hirb.enable
+  # Hirb.enable
 end
 
 def pbcopy(str)
