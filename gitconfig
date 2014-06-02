@@ -5,6 +5,7 @@
         st = status
         co = checkout
         ci = commit
+        cp = cherry-pick
         a = add
         b = branch
         br = branch
@@ -13,8 +14,10 @@
         r = reset
         m = merge
         l = log
-        push-for-review = "!sh -c 'git push origin HEAD:refs/for/master/'"
+        push-for-review = "!sh -c 'git push origin HEAD:refs/for/master'"
         fetch-pulls = fetch origin +refs/pull/*/head:refs/remotes/origin/pr/*
+        di-csv = diff --color --word-diff-regex="[^[:blank:],]"
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [user]
 	name = willnet
         email = netwillnet@gmail.com
@@ -32,3 +35,6 @@
   insteadOf = heroku:
 [push]
 	default = simple
+[core]
+	quotepath = false
+	precomposeunicode = true
