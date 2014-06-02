@@ -23,7 +23,7 @@ for DOTFILE_PATH in ${DOTFILES[@]}; do
   makelink "`pwd`/$DOTFILE_PATH" "$HOME/.$DOTFILE_PATH"
 done
 
-# submodule 
+# submodule
 echo "git submodule update --init"
 git submodule update --init
 
@@ -34,4 +34,3 @@ check_exists ~/.zsh/aliases.zsh && makelink "`pwd`/zsh/aliases.zsh" "$HOME/.zsh/
 check_exists ~/.zsh/completion.zsh && makelink "`pwd`/zsh/completion.zsh" "$HOME/.zsh/completion.zsh"
 check_exists ~/.zsh/history.zsh && makelink "`pwd`/zsh/history.zsh" "$HOME/.zsh/history.zsh"
 check_exists ~/.zsh/prompt.zsh && makelink "`pwd`/zsh/prompt.zsh" "$HOME/.zsh/prompt.zsh"
-
