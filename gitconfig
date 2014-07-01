@@ -38,3 +38,4 @@
 [core]
 	quotepath = false
 	precomposeunicode = true
+	excludesfile = /Users/maeshima/.gitignore
