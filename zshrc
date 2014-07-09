@@ -1,6 +1,9 @@
 export LANG=ja_JP.UTF-8
 export EDITOR=emacsclient
 export GREP_OPTIONS="--color=auto"
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 setopt auto_cd # cdを省略できる
 setopt auto_pushd # cd -[tab]でcd履歴を参照。もちろん履歴の実行もできる。
