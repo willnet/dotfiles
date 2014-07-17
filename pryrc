@@ -52,3 +52,10 @@ end
 #if defined? PryRails
 #  Pry.hooks.add_hook(:before_eval, :reload_everything) { reload!(true) }
 #end
+
+begin
+  require 'awesome_print'
+rescue LoadError
+else
+  AwesomePrint.pry!
+end
