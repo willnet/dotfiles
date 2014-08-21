@@ -2,7 +2,7 @@
 
 cd `dirname $0`
 
-DOTFILES=("zshrc" "pryrc" "gitconfig" "railsrc" "tmux.conf" "gemrc")
+DOTFILES=("zshrc" "pryrc" "gitconfig" "railsrc" "tmux.conf" "gemrc" "irbrc")
 
 check_exists()
 {
