@@ -1,4 +1,10 @@
 bundler
+rails
+pry
+pry-doc
+reditor
+powder
+html2haml
 reditor
 gem-browse
-rails
+powder
