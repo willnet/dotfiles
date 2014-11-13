@@ -3,8 +3,6 @@
 # expand aliases before completing
 #
 
-setopt complete_aliases     # 自動補完時にaliasを展開する
-
 alias where="command -v"
 alias g="git"
 alias r="rails"
