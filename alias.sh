@@ -1,3 +1,5 @@
+# alias.sh
+
 alias g="git"
 alias b="bundle install"
 alias be="bundle exec"
