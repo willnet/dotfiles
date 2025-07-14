@@ -2,8 +2,8 @@
 
 BASHRC="$HOME/.bashrc"
 ALIAS_SH="$(dirname "$0")/alias.sh"
-GITCONFIG="$HOME/.config/git/config"
-GITCONFIG_SH="$(dirname "$0")/gitconfig"
+GITCONFIG_DEST="$HOME/.config/git/config"
+GITCONFIG_SOURCE="$(dirname "$0")/gitconfig"
 
 if [ -f "$ALIAS_SH" ]; then
   if ! grep -q '# alias.sh' "$BASHRC"; then
@@ -11,9 +11,10 @@ if [ -f "$ALIAS_SH" ]; then
   fi
 fi
 
-if [ -f "$GITCONFIG_SH" ]; then
-  if ! grep -q '# gitconfig' "$GITCONFIG"; then
-    echo "# gitconfig" >> "$GITCONFIG"
-    cat "$GITCONFIG_SH" >> "$GITCONFIG"
+if [ -f "$GITCONFIG_SOURCE" ]; then
+  mkdir -p "$(dirname "$GITCONFIG_DEST")"
+  if ! grep -q '# gitconfig' "$GITCONFIG_DEST"; then
+    echo "# gitconfig" >> "$GITCONFIG_DEST"
+    cat "$GITCONFIG_SOURCE" >> "$GITCONFIG_DEST"
   fi
 fi
