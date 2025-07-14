@@ -2,7 +2,7 @@
 
 BASHRC="$HOME/.bashrc"
 ALIAS_SH="$(dirname "$0")/alias.sh"
-GITCONFIG="$HOME/.gitconfig"
+GITCONFIG="$HOME/.config/git/config"
 GITCONFIG_SH="$(dirname "$0")/gitconfig"
 
 if [ -f "$ALIAS_SH" ]; then
