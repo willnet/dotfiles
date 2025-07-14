@@ -1,0 +1,30 @@
+[color]
+        ui = auto
+[alias]
+        st = status
+        co = checkout
+        ci = commit
+        cp = cherry-pick
+        a = add
+        br = branch
+        di = diff
+        dic = diff --cached
+        sw = switch
+      	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[user]
+	name = Shinichi Maeshima
+	email = netwillnet@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF1mfzXdypgDC+TYgwEhtqc4NE48QCFqUYYAgWwjjQYW
+[pull]
+	ff = only
+[checkout]
+	defaultRemote = origin
+[init]
+	defaultBranch = main
+
+[gpg]
+  format = ssh
+
+[commit]
+	gpgsign = true
+[
